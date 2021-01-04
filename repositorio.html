@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="estilos.css" />
+    <title>Miguel Mejia</title>
+    <link rel="icon" type="image/svg" sizes="32x32" href="img/icono.png" />
+  </head>
+  <body>
+    <div class="header" id="home">
+      <div class="container">
+        <div class="nav-bar">
+          <div class="logo">
+            <h2>MIGUEL MEJIA</h2>
+          </div>
+          <nav>
+            <ul id="MenuItems">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#projetos">Projectos</a></li>
+              <li><a href="#ofertas">Ofertas</a></li>
+              <li><a href="#contato">Contacto</a></li>
+            </ul>
+          </nav>
+          <img src="img/menu.png" class="menu-icon" onclick="menutoggle()" />
+        </div>
+     
+      </div>
+    </div>
+
+    <!-- ----------repositorios de git hub------------ -->
+    <div class="small-container" >
+      <h2 class="titulo" id="projetos">Repositorios GitHub</h2>
+      <div class="row" id="contenido">
+        
+      </div>
+    </div>
+    <!-- ------------ofertas------------------- -->
+    <div class="oferta" id="ofertas">
+      <div class="small-container">
+        <div class="row">
+          <div class="col-2">
+            <img src="img/oferta.jpg" alt="" class="oterta-img" />
+          </div>
+          <div class="col-2">
+            <p>Trabajo remoto.</p>
+            <h1>Ofertas</h1>
+            <small
+              >WEB</small
+            >
+            <a href="#contato" class="btn">CONCATO &#8594;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ----------tecnologias------------------------------ -->
+    <div class="marcas">
+      <div class="small-container">
+        <div class="row">
+            <div class="col-5">
+              <img src="img/html.png" alt=""  />
+              </div>
+              <div class="col-5">
+                <img src="img/css.png" alt=""/>
+              </div>
+              <div class="col-5">
+                <img src="img/js.png" alt="" />
+              </div>
+              <div class="col-5">
+                <img src="img/angular.png" alt="" />
+              </div>
+              <div class="col-5">
+                <img src="img/vuejs.png" alt="" />
+              </div>
+              <div class="col-5">
+                <img src="img/nodejs.png" alt="" />
+              </div>
+              <div class="col-5">
+                <img src="img/Spring.png" alt="" />
+              </div>
+              <div class="col-5">
+                <img src="img/Java.png" alt="" />
+              </div>
+              <div class="col-5">
+                <img src="img/python.png" alt="" />
+              </div>
+              <div class="col-5">
+                <img src="img/react.png" alt="" />
+              </div>
+              <div class="col-5">
+                <img src="img/aws.png" alt="" />
+              </div>
+              <div class="col-5">
+                <img src="img/heroku.png" alt="" />
+              </div>
+              <div class="col-5">
+                <img src="img/micro.png" alt=""/>
+              </div>
+              <div class="col-5">
+                <img src="img/MongoDB.png" alt=""/>
+              </div>
+              <div class="col-5">
+                <img src="img/PostgreSQL.png" alt=""/>
+              </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- --------------footer-------------- -->
+
+    <div class="footer" id="contato">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col-1">
+            <h3>APP</h3>
+            <div class="logo-app">
+              <img src="img/appstore.png" alt="logo app" />
+              <img src="img/playstore.png" alt="logo app" />
+            </div>
+          </div>
+          <div class="footer-col-2">
+            <h2>Contato</h2>
+            <form name="mi_formulario" method="post" onsubmit="return validateForm()">
+        <label>Nombre: </label
+        ><input
+          type="text"
+          name="form-name"
+          placeholder="digite aqui su nombre"
+          required
+        />
+        <label>E-mail: </label
+        ><input
+          type="email"
+          name="form-email"
+          placeholder="digite aqui su e-mail"
+          required
+        />
+        <label>Asunto: </label
+        ><input
+          type="text"
+          name="form-asunto"
+          placeholder="digite aqui email"
+        />
+        <label>Texto: </label
+        ><textarea
+          name="area_texto"
+          id=""
+          cols="10"
+          rows="5"
+          placeholder="digite aqui su problema!"
+        ></textarea>
+        <input type="submit" value="Submit" class="btn-form" />
+      </form>
+          </div>
+          <div class="footer-col-3">
+            <h3>Links</h3>
+            <ul>
+              <li>Blogs</li>
+              <li>Web personal</li>
+              <li>Sistemas</li>
+            </ul>
+          </div>
+          <div class="footer-col-4">
+            <h3>Seguir</h3>
+            <ul>
+              <li>Facebook</li>
+              <li>Twitter</li>
+              <li>Instagram</li>
+              <li>YouTube</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <p class="copiright">Copyright 2021 - Miguel Mejia</p>
+    </div>
+
+    <!-- --------------js menu responsivo--------------- -->
+    <script>
+      var MenuItems = document.getElementById("MenuItems");
+
+      MenuItems.style.maxHeight = "0px";
+
+      function menutoggle() {
+        if (MenuItems.style.maxHeight == "0px") {
+          MenuItems.style.maxHeight = "200px";
+        } else {
+          MenuItems.style.maxHeight = "0px";
+        }
+      }
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>
